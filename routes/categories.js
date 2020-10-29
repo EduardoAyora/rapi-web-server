@@ -8,7 +8,7 @@ const Price = require('../models/price')
 categoriesRouter.route('/')
 .get(async (req, res) => {
     try {
-        const categories = await Category.find({})
+        const categories = await Category.find({}).populate({path: 'products', populate: {path: 'prices'}})
         res.json(categories)
     } catch(err) {
         res.status(500).json({message: err.message})

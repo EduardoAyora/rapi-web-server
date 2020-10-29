@@ -35,7 +35,7 @@ app.use('/orders', ordersRouter)
 //     console.log('a user connected')
 // });
 
-http.listen(1100, () => {
-    console.log('escuchando en :1100')
+http.listen(process.env.PORT, () => {
+    console.log(`escuchando en :${process.env.PORT}`)
 })
 

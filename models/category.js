@@ -7,9 +7,6 @@ const CategorySchema = new Schema ({
         required: true,
         unique: true
     },
-    image_url: {
-        type: String
-    },
     slug: { 
         type: String,
         required: true,
