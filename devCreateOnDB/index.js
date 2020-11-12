@@ -6,7 +6,7 @@ mongoose.connect('mongodb://localhost:27017/menu', {
 }, () => {
     console.log('DB connected')
 
-    require('./createCategory')
+    require('./createProduct')
     
 });
 

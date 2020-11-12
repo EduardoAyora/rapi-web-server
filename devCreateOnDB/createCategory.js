@@ -4,10 +4,9 @@ const Category = require('../models/category')
 async function exe() {
     try {
         await new Category({
-            name: 'A la carta',
-            image_url: '/images/categorias/carta.png',
-            slug: 'carta',
-            products: ['5f8f8d7d5960a35353f3b27a']
+            name: 'Categoria nueva',
+            slug: 'nueva',
+            products: []
         }).save()
         await new 
         mongoose.disconnect()

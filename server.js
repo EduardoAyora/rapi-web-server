@@ -3,6 +3,7 @@ const express = require('express')
 const app = express()
 const http = require('http').createServer(app)
 const cors = require('cors')
+const path = require('path')
 const mongoose = require('mongoose')
 // const io = require('socket.io')(http)
 
@@ -26,6 +27,7 @@ app.options('*', cors())
 // habilita el dominio, puerto o protocolo
 app.use(cors(corsOptions))
 app.use(express.json())
+app.use(express.static(path.join(__dirname, 'public')));
 
 // rutas de la api
 app.use('/categories', categoriesRouter)
